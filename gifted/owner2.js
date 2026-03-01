@@ -843,7 +843,7 @@ gmd(
       }
 
       const sentMessage = await Gifted.sendMessage(from, { delete: quotedKey });
-      await Gifted.sendMessage(from, { delete: sendMessage.key });
+      await Gifted.sendMessage(from, { delete: sentMessage.key });
       await react("✅");
     } catch (error) {
       await react("❌");
